@@ -1,0 +1,139 @@
+.caixa {
+    margin-top: 125px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    margin-left: 15%;
+
+}
+
+.esquerda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.perfil {
+    margin-top: -170px;
+}
+
+.direita {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.nome {
+    border-top: 0cm;
+    border-left: 0cm;
+    border-right: 0cm;
+}
+
+.email {
+    border-top: 0cm;
+    border-left: 0cm;
+    border-right: 0cm;
+}
+
+.senha {
+    border-top: 0cm;
+    border-left: 0cm;
+    border-right: 0cm;
+}
+
+.nome:focus {
+    border-top: 0cm;
+    border-left: 0cm;
+    border-right: 0cm;
+    box-shadow: 0 0 0 0;
+    outline: none;
+}
+
+.email:focus {
+    border-top: 0cm;
+    border-left: 0cm;
+    border-right: 0cm;
+    box-shadow: 0 0 0 0;
+    outline: none;
+}
+
+.senha:focus {
+    border-top: 0cm;
+    border-left: 0cm;
+    border-right: 0cm;
+    box-shadow: 0 0 0 0;
+    outline: none;
+}
+
+.datanas {
+    border-top: 0cm;
+    border-left: 0cm;
+    border-right: 0cm;
+}
+
+.biografia {
+    border-top: 0cm;
+    border-left: 0cm;
+    border-right: 0cm;
+}
+
+.datanas:focus {
+    border-top: 0cm;
+    border-left: 0cm;
+    border-right: 0cm;
+    box-shadow: 0 0 0 0;
+    outline: none;
+}
+
+.biografia:focus {
+    border-top: 0cm;
+    border-left: 0cm;
+    border-right: 0cm;
+    box-shadow: 0 0 0 0;
+    outline: none;
+}
+
+.generos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.campos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.botao1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+button {
+    color: black;
+    width: 200px;
+    height: 35px;
+    font-size: 18px;
+    border: none;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: #CFE15D;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #b4c44f;
+}
+.op {
+    font-size: 15px;
+}

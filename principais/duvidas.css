@@ -1,0 +1,52 @@
+
+
+.caixa
+{   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 37%;
+    height: 20%;
+    width: 30%;
+    font-size: 17px;
+    font-weight: bold;
+}
+.beleza
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 27%;
+    height: 500px;
+    width: 50%;
+    border-radius: 15px;
+    border: solid 2px
+}
+.respostas
+{
+    height: 90%;
+    margin-left: 1%;
+    width: 97%;
+    color: black;
+    overflow-y: scroll;
+    word-break: break-all;
+}
+.botao
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 98%;
+    margin-left: 10px;   
+}
+
+.inputmsg
+{
+    width: 95%;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.enter{
+    border-radius: 5px;
+}
