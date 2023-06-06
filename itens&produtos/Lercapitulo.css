@@ -1,16 +1,14 @@
-.capitulo
-{
+.capitulo {
     display: flex;
     flex-direction: row;
-    font-size: 20px;
+    font-size: 14px;
     justify-content: center;
     justify-items: center;
     font-weight: bold;
- 
+    color: #4d0fc1;
 }
 
-.livro
-{
+.livro {
     margin-top: -50px;
     display: flex;
     flex-direction: row;
@@ -20,9 +18,35 @@
     font-weight: bold;
 }
 
-.caixa
-{
+.caixa {
     width: 40%;
     margin-left: 30%;
     text-align: center;
+}
+
+.caixaemail {
+    font-weight: bold;
+    margin-left: 10px;
+    width: 150px;
+    height: 30px;
+    background-color: #CFE15D;
+}
+
+.contato {
+    margin-left: 10px;
+    width: 200px;
+    height: 100px;
+}
+
+button:hover {
+    background-color: #4d0fc1;
+    color: white;
+}
+.prox2 {
+    background-color: #CFE15D;
+    margin-left: 700px;
+    border: none;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 180px;
 }

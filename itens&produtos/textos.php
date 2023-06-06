@@ -30,21 +30,21 @@
                 <img src="../imagens/livro1.png" class="img" width="90%" height="270px"><br>
                 Senhorita
                 <a href="../itens&produtos/item.php">
-                <br><button class="botaoler">Ler</button><br>
+                    <br><button class="botaoler">Ler</button><br>
                 </a>
             </div>
             <div class="item">
                 <img src="../imagens/livro2.png" class="img" width="90%" height="270px"><br>
                 Mente e Coração 
                 <a href="../itens&produtos/item.php">
-             <br><button class="botaoler">Ler</button><br>
-             </a>
+                    <br><button class="botaoler">Ler</button><br>
+                </a>
             </div>
             <div class="item">
                 <img src="../imagens/livro3.png" class="img" width="90%" height="270px"><br>
                 Por Onde Você For
                 <a href="../itens&produtos/item.php">
-                <br><button class="botaoler">Ler</button><br>
+                    <br><button class="botaoler">Ler</button><br>
                 </a>
             </div>
     </div>
