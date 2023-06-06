@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +9,32 @@
     <title>Fale Conosco</title>
     <link rel="stylesheet" href="duvidas.css">
 </head>
+
 <body>
-<?php
+    <?php
     include("../principais/menu.html")
         ?>
-    <div class="caixa">
-        Tire sua dúvida por aqui:
-    </div>
-    <br>
-    <div class="beleza">
-        <div class="respostas" id="resposta"></div>
-        <div class="botao">
-          <input type="text" placeholder="Digite aqui..." id="mensagem" class="inputmsg" onkeypress="return searchKeyPress(event)">
-          <button class="enter" type="submit" id="botao" onclick="Enviar();">↩</button Value="Search" >
-      </div>
-    </div>
 
-</body>
-<script src="../java/caixadetexto.js"></script>
+    <body>
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <form id="resposta">
+                <label for="name">Nome:</label>
+                <input type="text" class="nome" id="name" name="name" placeholder="Seu nome">
+
+                <label for="email">Email:</label>
+                <input type="email" class="email" id="email" name="email" placeholder="Seu email">
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" class="msg" id="mensagem" onkeypress="return searchKeyPress(event)"
+                    placeholder="Digite sua mensagem"></textarea>
+                <input type="submit" onclick="Enviar();"Value="Enviar ↩">
+            </form>
+            <div class="caixa">
+                <a href="https://www.instagram.com/_haydavi_/"><img src="../imagens/instagram.png" width="100px"></a>
+                <a href="https://www.facebook.com/profile.php?id=100008209638109"><img src="../imagens/facebook.png"
+                        width="100px"></a>
+                <a href=""><img src="../imagens/email.png" width="100px"></a>
+            </div>
+    </body>
+    <script src="../java"></script>

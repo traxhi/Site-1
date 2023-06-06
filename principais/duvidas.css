@@ -1,52 +1,63 @@
-
-
-.caixa
-{   
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: 37%;
-    height: 20%;
-    width: 30%;
-    font-size: 17px;
-    font-weight: bold;
+.container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-.beleza
+.caixa{
+    margin-top: 5%;
+    margin-left: 10%;
+}
+img:hover
 {
+    cursor: pointer;
+}
+h2 {
+    text-align: center;
+}
+
+form {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin-left: 27%;
-    height: 500px;
-    width: 50%;
-    border-radius: 15px;
-    border: solid 2px
-}
-.respostas
-{
-    height: 90%;
-    margin-left: 1%;
-    width: 97%;
-    color: black;
-    overflow-y: scroll;
-    word-break: break-all;
-}
-.botao
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 98%;
-    margin-left: 10px;   
 }
 
-.inputmsg
-{
-    width: 95%;
-    font-size: 16px;
-    border-radius: 5px;
+label {
+    margin-top: 10px;
+}
+.nome{
+    height: 40px;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+.email{
+    height: 40px;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+.msg{
+    height: 80px;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    resize: none;
 }
 
-.enter{
-    border-radius: 5px;
+
+input[type="submit"] {
+    width: auto;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
 }
