@@ -19,11 +19,11 @@
             <div id="image-container">
                 <img src="../imagens/ImagenG.png" width="300px" height="350px" class="imagem">
             </div>
-            <input type="file" id="image-input" class="envimg" style="display: none" onchange="sendImage()">
-            <div class="botao1" onclick="openFileInput()">Importar capa
-            </div>
+            <form action="salvar_imagem.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="foto" id="image-input" class="envimg" style="display: none" onchange="sendImage()">
+            <div class="botao1" value="foto" id="foto" onclick="openFileInput()">Importar capa</div>
         </div>
-        <form action="crud3.php" class="caixa4" method="post">
+        <div class="caixa4">
                 <div class="obra">
                     <input type="text" class="linha" id="titulo" name="nome" maxlength="100" placeholder="Dê um nome à sua obra..."
                         required><br>
@@ -36,6 +36,7 @@
                 </div>
             </div>
             <input type="submit" value="PUBLICAR" name="publicar" class="botao2">
+        </div>
         </form>
     </div>
 
@@ -64,3 +65,4 @@
         }
     }
 </script>
+<script src="../java/animateto.js"
