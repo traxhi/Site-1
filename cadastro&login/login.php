@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fazer Login</title>
-    <link rel="stylesheet" href="login.css">
-</head>
-
-<body>
-    <?php
+<?php
     include("../principais/menu.html");
 
     if(isset($_POST["senha"]))
     {
         $email = $_POST["email"];
+        session_start();
+        $_SESSION['login'] = $email;
+        // $email =  $_SESSION['login'];
         $senha = $_POST["senha"];
         include("conecta2.php");
         $comando = $pdo->prepare("Select * FROM cadastropedro where email='$email' and senha='$senha'");
@@ -35,6 +26,18 @@
 
         ?>
 
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
     <div class="embaixo">
         <div class="usuario">
             <img src="../imagens/usuario.png" class="usuarioo">
