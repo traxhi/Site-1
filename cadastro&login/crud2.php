@@ -7,8 +7,7 @@
     $senha            = $_POST["senha"];
     if(isset($_POST["cadastrar"]))
     {
-
-    $comando = $pdo->prepare("INSERT INTO cadastropedro VALUES('$nome','$email','$senha')" );
+    $comando = $pdo->prepare("INSERT INTO cadastropedro(nome, email, senha) VALUES('$nome','$email','$senha')" );
     $resultado = $comando->execute();
     header("Location: autenticacao.php");
 

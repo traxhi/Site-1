@@ -106,6 +106,8 @@ input {
     border-top: 0cm;
     border-left: 0cm;
     border-right: 0cm;
+    font-weight: bold;
+    color: black;
 }
 
 .linha2 {
@@ -137,6 +139,7 @@ input {
     background-color:#CFE15D;
     border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .botao1:hover {

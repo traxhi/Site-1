@@ -1,10 +1,10 @@
 <?php
+ session_start();
     include("../principais/menu.html");
 
     if(isset($_POST["senha"]))
     {
         $email = $_POST["email"];
-        session_start();
         $_SESSION['login'] = $email;
         // $email =  $_SESSION['login'];
         $senha = $_POST["senha"];

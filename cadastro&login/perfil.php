@@ -1,3 +1,23 @@
+<?php 
+    session_start();
+    include ("conecta4.php");
+    
+    $email = $_SESSION["login"];
+    
+    // Recupera as informações do usuário do banco de dados
+    $comando = $pdo->prepare("SELECT nome, bio, senha, foto FROM cadastropedro WHERE email = :email");
+    $comando->bindValue(":email", $email);
+    $comando->execute();
+    
+    // Atribui os valores recuperados às variáveis correspondentes
+    $resultado = $comando->fetch();
+    $nome = $resultado['nome'];
+    $biografia = $resultado['bio'];
+    $senha = $resultado['senha'];
+    $caminhofoto = $resultado['foto'];
+    $base64Imagem = base64_encode($caminhofoto);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,28 +37,24 @@
     <div class="caixa2">
         <div class="caixa3">
             <div id="image-container">
-                <img src="../imagens/ImagenG.png" width="300px" height="350px" class="imagem">
+                <img src="data:image/jpeg;base64,<?php echo $base64Imagem; ?>" width="300px" height="350px" class="imagem">
             </div>
-            <form action="salvar_imagem.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="foto" id="image-input" class="envimg" style="display: none" onchange="sendImage()">
-            <div class="botao1" value="foto" id="foto" onclick="openFileInput()">Importar capa</div>
+            <form action="crud3.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="foto" id="image-input" class="envimg" style="display: none" onchange="sendImage()">
+                <div class="botao1" value="foto" id="foto" onclick="openFileInput()">Importar capa</div>
         </div>
         <div class="caixa4">
-                <div class="obra">
-                    <input type="text" class="linha" id="nome" name="nome" maxlength="100" placeholder="Nome"
-                        required><br>
-                    <input type="text" class="linha" id="email" name="email" maxlength="100" placeholder="E-Mail"
-                        required>
-                        <input type="text" class="linha" id="senha" name="senha" maxlength="100" placeholder="Senha"
-                        required>
-                </div>
-                <div class="caixa5">
-                    <textarea class="linha2" id="capitulo" name="bio" placeholder="Biografia..."
-                        wrap="hard" required maxlength="500"></textarea>
-                </div>
+            <div class="obra">
+                <input type="text" class="linha" id="nome" name="nome" value="<?php echo $nome; ?>" maxlength="100" placeholder="Nome" required><br>
+                <input type="text" class="linha" id="email" name="email" value="<?php echo $email; ?>" maxlength="100" placeholder="E-Mail" required>
+                <br>
+                <input type="password" class="linha" id="senha" name="senha" value="<?php echo $senha; ?>" maxlength="100" placeholder="Senha" required>
             </div>
-            <input type="submit" value="Salvar" name="salvar" class="botao2">
+            <div class="caixa5">
+                <textarea class="linha2" id="capitulo" name="bio" placeholder="Biografia..." wrap="hard" required maxlength="500"><?php echo $biografia; ?></textarea>
+            </div>
         </div>
+        <input type="submit" value="Salvar" name="salvar" class="botao2">
         </form>
     </div>
 </body>
