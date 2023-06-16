@@ -51,9 +51,6 @@
                 <input name="senha" type="text" id="txtBusca" class="Senha" />
             </div>
             <div class="sejaaautor">
-                <a href="../cadastro&login/cadastro autor.php">
-                    <div class="sejaAutor">Seja um Autor ➜</div>
-                </a>
             </div>
             <div class="botao">
                 <button type="submit">CONTINUAR</button>
