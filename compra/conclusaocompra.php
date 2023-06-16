@@ -18,8 +18,7 @@
             <div class="texto1">
                 <br><br>
                 Obrigada por assinar! <br> <br>
-                <a href="../itens&produtos/leituras.php"><button class="botao2">Biblioteca</button></a>
-                <a href="../itens&produtos/textos.php"><button class="botao2">Mais Textos</button></a>
+                <a href="../cadastro&login/login.php"><button class="botao2">Fazer Login</button></a>
 
             </div>
         </div>

@@ -18,7 +18,7 @@
         }
 
         if($n > 0){
-            header("Location: ../compra/pagamento.php");
+            header("Location: ../itens&produtos/textos.php");
         }
 
 
