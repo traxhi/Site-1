@@ -19,22 +19,21 @@
         <div class="container">
             <h2>Fale Conosco</h2>
             <form id="resposta">
-                <label for="name">Nome:</label>
-                <input type="text" class="nome" id="name" name="name" placeholder="Seu nome">
+                <label for="name">Nome</label>
+                <input type="text" class="nome" id="name" name="name" placeholder="Seu nome"><br>
 
-                <label for="email">Email:</label>
-                <input type="email" class="email" id="email" name="email" placeholder="Seu email">
+                <label for="email">Email</label>
+                <input type="email" class="email" id="email" name="email" placeholder="Seu email"><br>
 
-                <label for="message">Mensagem:</label>
+                <label for="message">Mensagem</label>
                 <textarea id="message" class="msg" id="mensagem" onkeypress="return searchKeyPress(event)"
                     placeholder="Digite sua mensagem"></textarea>
-                <input type="submit" onclick="Enviar();"Value="Enviar ↩">
+                <input type="submit" onclick="Enviar();"Value="Enviar" class="">
             </form>
             <div class="caixa">
-                <a href="https://www.instagram.com/_haydavi_/"><img src="../imagens/instagram.png" width="100px"></a>
-                <a href="https://www.facebook.com/profile.php?id=100008209638109"><img src="../imagens/facebook.png"
-                        width="100px"></a>
-                <a href=""><img src="../imagens/email.png" width="100px"></a>
+                <a href="https://www.instagram.com/_haydavi_/"><img src="../imagens/instagram.png" width="42px"></a>
+                <a href="https://www.facebook.com/profile.php?id=100008209638109"><img src="../imagens/facebook.png" width="40px"></a>
+                <a href=""><img src="../imagens/email.png" width="40px"></a>
             </div>
     </body>
     <script src="../java"></script>

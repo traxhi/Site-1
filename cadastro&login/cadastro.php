@@ -11,11 +11,26 @@
 
 <body>
     <?php
-    include("../principais/menu.html")
-        ?>
+    if (isset($_POST["cadastrar"])) {
+        $nome = $_POST["nome"];
+        $email = $_POST["email"];
+        $senha = $_POST["senha"];
+        $confirmarSenha = $_POST["confirmarSenha"];
+
+        if ($senha !== $confirmarSenha) {
+            $mensagemErro = "A senha e a confirmação de senha não correspondem.";
+        } else {
+            include("conecta2.php");
+            $comando = $pdo->prepare("INSERT INTO cadastropedro(nome, email, senha) VALUES('$nome','$email','$senha')");
+            $resultado = $comando->execute();
+            header("Location: autenticacao.php");
+        }
+    }
+    include("../principais/menu.html");
+    ?>
     <div class="cadastro">
         <img src="../imagens/perfil.png" width="150" height="150" class="perfil">
-        <form action="crud2.php" method="post">
+        <form action="cadastro.php" method="post">
             <label for="nome" class="linha"> Nome</label>
             <input type="text" class="linha" id="nome" name="nome" required>
             <label for="email" class="linha">E-mail</label>
@@ -23,11 +38,14 @@
             <label for="senha" class="linha">Senha</label>
             <input type="password" class="linha" id="senha" name="senha" required>
             <label for="senha" class="linha">Confirmar Senha</label>
-            <input type="password" class="linha" id="confirmarSenha" name="confirmarSenha"required> 
+            <input type="password" class="linha" id="confirmarSenha" name="confirmarSenha" required>
+            <?php if (isset($mensagemErro)) { ?>
+                <p><?php echo $mensagemErro; ?></p>
+            <?php } ?>
             <input type="submit" value="CADASTRAR" name="cadastrar" class="botao">
         </form>
-       
         <script src="../java/animateto.js"></script>
+    </div>
 </body>
 
 </html>

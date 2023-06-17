@@ -21,7 +21,28 @@
             header("Location: ../itens&produtos/textos.php");
         }
 
+    }
 
+    // Verificar se o usuário já está autenticado
+    if (isset ($_SESSION['login']) && ($_SESSION['login'])!="" ) {
+        header("Location: ../itens&produtos/textos.php");
+    }
+
+    if (isset($_POST["senha"])) {
+        $email = $_POST["email"];
+        $senha = $_POST["senha"];
+        include("conecta2.php");
+        $comando = $pdo->prepare("SELECT * FROM cadastropedro WHERE email = :email AND senha = :senha");
+        $comando->bindParam(":email", $email);
+        $comando->bindParam(":senha", $senha);
+        $comando->execute();
+        $n = $comando->rowCount();
+
+        if ($n > 0) {
+            $_SESSION['login'] = $email;
+            header("Location: ../itens&produtos/textos.php");
+            exit();
+        }
     }
 
         ?>

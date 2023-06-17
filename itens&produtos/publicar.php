@@ -16,7 +16,7 @@
     <div class="caixa1">Publicar Obra</div>
     <div class="caixa2">
         <div class="caixa3">
-            <div id="image-container">
+            <div id="image-container" class="img">
                 <img src="../imagens/ImagenG.png" width="300px" height="350px" class="imagem">
             </div>
             <form action="salvar_imagem.php" method="post" enctype="multipart/form-data">

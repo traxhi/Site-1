@@ -9,6 +9,7 @@ $nome = $_POST["nome"];
 $senha = $_POST["senha"];
 $bio = $_POST["bio"];
 
+
 // Verifica se uma nova foto foi enviada
 if (!empty($_FILES["foto"]["tmp_name"])) {
     try {

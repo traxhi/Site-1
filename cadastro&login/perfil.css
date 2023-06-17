@@ -119,6 +119,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: 0;
+    font-weight: bold;
 }
 
 .caixa5 {
@@ -166,6 +167,25 @@ input {
 }
 
 .botao2:hover {
+    background-color: #c2d357;
+    cursor: pointer;
+}
+
+.botao3{
+    position: absolute;
+    top: 90%;
+    color: black;
+    width: 15%;
+    height: 35px;
+    font-size: 18px;
+    border: none;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: #CFE15D;
+    margin-top: 20px;
+    left: 70%;
+}
+.botao3:hover {
     background-color: #c2d357;
     cursor: pointer;
 }

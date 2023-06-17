@@ -17,7 +17,7 @@
     <div class="D3">
         <div class="D2">
             <div class="autorImg">
-                <img src="../imagens/sarah.PNG" class="autorImg" alt="autorImg" height="400" width="400">
+                <img src="../imagens/sarah.jpg" alt="autorImg" height="400" width="400">
             </div>
         </div>
         <div class="D1">

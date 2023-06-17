@@ -4,10 +4,11 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-top: 50px;
 }
 .caixa{
     margin-top: 5%;
-    margin-left: 10%;
+    margin-left: 35%;
 }
 img:hover
 {
@@ -15,6 +16,8 @@ img:hover
 }
 h2 {
     text-align: center;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 form {
@@ -24,6 +27,7 @@ form {
 
 label {
     margin-top: 10px;
+    font-weight: bold;
 }
 .nome{
     height: 40px;
@@ -52,9 +56,11 @@ input[type="submit"] {
     width: auto;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #CFE15D;
+    font-weight: bold;
+    color: black;
     border: none;
+    border-radius: 25px;
     cursor: pointer;
 }
 
