@@ -21,9 +21,23 @@
             $mensagemErro = "A senha e a confirmação de senha não correspondem.";
         } else {
             include("conecta2.php");
-            $comando = $pdo->prepare("INSERT INTO cadastropedro(nome, email, senha) VALUES('$nome','$email','$senha')");
-            $resultado = $comando->execute();
-            header("Location: autenticacao.php");
+            
+            // Verifica se o email já existe no banco de dados
+            $comandoVerifica = $pdo->prepare("SELECT COUNT(*) FROM cadastropedro WHERE email = :email");
+            $comandoVerifica->bindParam(':email', $email);
+            $comandoVerifica->execute();
+            $existeEmail = $comandoVerifica->fetchColumn();
+
+            if ($existeEmail) {
+                $mensagemErro = "O email fornecido já está cadastrado.";
+            } else {
+                $comando = $pdo->prepare("INSERT INTO cadastropedro (nome, email, senha) VALUES (:nome, :email, :senha)");
+                $comando->bindParam(':nome', $nome);
+                $comando->bindParam(':email', $email);
+                $comando->bindParam(':senha', $senha);
+                $resultado = $comando->execute();
+                header("Location: autenticacao.php");
+            }
         }
     }
     include("../principais/menu.html");

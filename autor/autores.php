@@ -22,7 +22,7 @@
             <div class="item1">
                 <img src="../imagens/autoresball (1).png" width="90%" height="300px">
                 Edin Nolat
-                <a href="../autor/biografia.php">
+                <a href="../autor/biografia2.php">
                     <button class="botaover">Ver</button>
                 </a>
             </div>
